@@ -117,7 +117,7 @@ client.on("message", (topic, payload, packet) => {
     let fields = (msgMap.get(topic) as Entry[]).map((e) => {
       return e.cb(e, payload.toString());
     }).filter(el => el != null) as IPoint[];
-    console.log(topic, fields.length);
+    //console.log(topic, fields.length);
     db.writeMeasurement(topic, fields);
   }
 });
