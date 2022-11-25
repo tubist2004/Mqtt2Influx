@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 #RUN git clone https://github.com/tubist2004/Mqtt2Influx
 
 COPY package*.json ./
-
+RUN apk add --update npm
 RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
